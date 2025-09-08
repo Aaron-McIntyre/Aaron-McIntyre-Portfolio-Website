@@ -5,7 +5,7 @@ import { Canvas } from "@react-three/fiber";
 
 const StarBackground = () => {
   return (
-    <div className="absolute inset-0 z-0">
+    <div className="absolute inset-0 -z-1">
       <Canvas camera={{ position: [0, 0, 1] }}>
         <Stars
           radius={100}
