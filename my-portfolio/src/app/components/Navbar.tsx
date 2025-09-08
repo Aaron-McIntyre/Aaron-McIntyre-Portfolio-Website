@@ -1,15 +1,11 @@
-"use client";
-
-import "./navbar.css";
-import { useState } from "react";
 import Link from "next/link";
-
 
 const Navbar = () => {
 
+
   return (
 
-    <nav className="flex items-center w-full h-16 px-4">
+    <nav className="flex items-center w-full h-16 px-4 sticky">
 
       <div className="w-1/5 text-xl font-bold">
         Aaron McIntyre
