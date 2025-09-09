@@ -12,9 +12,10 @@ const Navbar = () => {
       </div>
 
       <div className="w-4/5 flex justify-end space-x-6">
-        <Link href="/">Home</Link>
-        <Link href="/">Portfolio</Link>
-        <Link href="/">Contact</Link>
+        <Link href="/" className="hover:text-[var(--text-muted)]">Home</Link>
+        <Link href="/" className="hover:text-[var(--text-muted)]">Portfolio</Link>
+        <Link href="/" className="hover:text-[var(--text-muted)]">About</Link>
+        <Link href="/" className="hover:text-[var(--text-muted)]">Contact</Link>
       </div>
     </nav>
   );
