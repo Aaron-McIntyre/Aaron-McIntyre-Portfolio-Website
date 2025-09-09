@@ -6,8 +6,12 @@ import Link from "next/link";
 export default function Home() {
   return (
     <>
+    <StarBackground />
+    <Navbar />
     
-    <Link href="./ComponentsShowroom">Components (Temporary) </Link>
+    <div className="w-full h-screen">
+      <h1 className="text-6xl text-white font-bold text-center pt-40">Aaron McIntyre</h1>
+    </div>
     </>
   );
 }
