@@ -21,7 +21,7 @@ const Navbar = () => {
           hover:after:w-full">
             Home</Link>
 
-        <Link href="/" className="hover:text-[var(--text-muted)]
+        <Link href="/portfolio" className="hover:text-[var(--text-muted)]
          relative after:content-['']
           after:absolute 
           after:left-0 
@@ -34,7 +34,7 @@ const Navbar = () => {
           hover:after:w-full">
             Portfolio</Link>
           
-          <Link href="/" className="hover:text-[var(--text-muted)]
+          <Link href="/about" className="hover:text-[var(--text-muted)]
          relative after:content-['']
           after:absolute 
           after:left-0 
@@ -47,7 +47,7 @@ const Navbar = () => {
           hover:after:w-full">
             About</Link>
 
-        <Link href="/" className="hover:text-[var(--text-muted)]
+        <Link href="/contact" className="hover:text-[var(--text-muted)]
          relative after:content-['']
           after:absolute 
           after:left-0 
