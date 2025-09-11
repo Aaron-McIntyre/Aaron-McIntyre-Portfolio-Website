@@ -8,9 +8,6 @@ import indexPageStyles from "./index.module.css";
 export default function Home() {
   return (
     <>
-    <StarBackground />
-    <Navbar />
-    
     <div className="w-full h-screen">
       <h1
   className={`${indexPageStyles.homeTitleFont} text-6xl text-white font-bold text-center pt-40`}> Aaron McIntyre </h1>
