@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 export default function Footer() {
   return (
     
-    <nav className="flex items-center w-full h-16 px-4 bottom-0">
+    <footer className="flex items-center w-full h-16 px-4 top-100vh">
 
         <div className="w-full flex justify-end space-x-6">
             <a href="https://github.com/Aaron-McIntyre">
@@ -29,7 +29,7 @@ export default function Footer() {
 
 
     
-    </nav>
+    </footer>
     
   );
 }
