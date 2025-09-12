@@ -5,6 +5,7 @@ import Navbar from "../components/Navbar";
 import ProjectCard from "../components/ProjectCard";
 import FeaturedProjectCard from "../components/FeaturedProjectCard";
 import FeaturedCardCarousel from "../components/FeaturedCardCarousel";
+import ViewMoreButton from "../components/ViewMoreButton";
 
  export default function ComponentsShowroom() {
    return (
@@ -34,6 +35,7 @@ import FeaturedCardCarousel from "../components/FeaturedCardCarousel";
       /> */}
 
       {/* <FeaturedCardCarousel /> */}
+
 
     </>
   );
