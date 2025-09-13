@@ -85,14 +85,10 @@ export default function PortfolioSection() {
 
   return (
     <section className="w-full px-8 py-16">
-      <h1
-        className={`${portfolioPageStyles.projectTitleFont} text-5xl text-white font-bold text-center`}
-      >
+      <h1 className="titleFont text-5xl text-white font-bold text-center">
         Projects
       </h1>
-      <h3
-        className={`${portfolioPageStyles.projectTitleFont} relative text-2xl text-[var(--text-muted)] font-semibold text-center pt-3 pb-10`}
-      >
+      <h3 className="titleFont relative text-2xl text-[var(--text-muted)] font-semibold text-center pt-3 pb-10">
         All of my personal projects!
       </h3>
 

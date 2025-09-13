@@ -18,6 +18,15 @@
   src: url('/fonts/Roboto-Bold.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'Montserrat-Italic';
+    src: url('/fonts/Montserrat-ExtraLightItalic.ttf') format('truetype');
+}
+
+.titleFont {
+    font-family: 'Montserrat-Italic', sans-serif;
+}
+
 body {
   background: var(--background);
   color: var(--text);

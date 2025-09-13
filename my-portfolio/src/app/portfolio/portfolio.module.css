@@ -1,8 +1,0 @@
-@font-face {
-    font-family: 'Montserrat-Italic';
-    src: url('/fonts/Montserrat-ExtraLightItalic.ttf') format('truetype');
-}
-
-.projectTitleFont {
-    font-family: 'Montserrat-Italic', sans-serif;
-}
