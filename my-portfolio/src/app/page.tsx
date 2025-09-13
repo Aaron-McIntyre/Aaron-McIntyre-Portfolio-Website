@@ -31,7 +31,7 @@ export default function Home() {
           Some of my most recent personal projects!
         </h3>
 
-        <div className="w-full h-96 flex justify-center items-center mt-20">
+        <div className="w-full h-96 flex justify-center items-center mt-20 pb-20">
           <FeaturedCardCarousel />
         </div>
       </div>
