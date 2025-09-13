@@ -1,3 +1,7 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 export default function ProjectCard({
   title,
   description,
@@ -12,11 +16,16 @@ export default function ProjectCard({
   tags: string[];
 }) {
   return (
-    <div className="w-full h-full rounded-2xl overflow-hidden shadow-lg bg-neutral-900 border border-neutral-900 flex flex-col">
+    <motion.div
+      className="w-full h-full rounded-2xl overflow-hidden shadow-lg bg-neutral-900 border border-neutral-900 flex flex-col"
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.95 }}
+    >
       <img
         className="w-full h-48 object-cover"
         src={imageUrl}
         alt="Project Image"
+        draggable={false}
       />
       <div className="px-3 py-3 flex-1">
         <p className="font-bold text-xl text-[var(--text)]">{title}</p>
@@ -32,6 +41,6 @@ export default function ProjectCard({
           </span>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 }
