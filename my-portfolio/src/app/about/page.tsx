@@ -1,4 +1,4 @@
-import SkillBox from "../components/SkillBox";
+import SkillFilter from "../components/SkillFilter";
 
 export default function About() {
   return (
@@ -26,19 +26,7 @@ export default function About() {
       <h1 className="titleFont text-6xl text-white font-bold text-center pt-20">
         Skills
       </h1>
-      <div className="h-[50vh] w-full mt-10 mx-auto flex flex-wrap justify-center gap-x-1 gap-y-0 rounded-4xl">
-        <SkillBox title="Python" imageUrl="icons/python.svg" />
-        <SkillBox title="JavaScript" imageUrl="icons/javascript.svg" />
-        <SkillBox title="CSS" imageUrl="icons/css.svg" />
-        <SkillBox title="Django" imageUrl="icons/django.svg" />
-        <SkillBox title="HTML" imageUrl="icons/html5.svg" />
-        <SkillBox title="Java" imageUrl="icons/java.svg" />
-        <SkillBox title="TailwindCSS" imageUrl="icons/tailwindcss.svg" />
-        <SkillBox title="Git" imageUrl="icons/github.svg" />
-        <SkillBox title="React" imageUrl="icons/react.svg" />
-        <SkillBox title="TypeScript" imageUrl="icons/typescript.svg" />
-        <SkillBox title="NextJS" imageUrl="icons/nextdotjs.svg" />
-      </div>
+      <SkillFilter />
     </>
   );
 }
