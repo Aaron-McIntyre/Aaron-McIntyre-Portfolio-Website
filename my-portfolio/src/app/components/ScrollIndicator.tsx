@@ -9,8 +9,8 @@ export default function ScrollIndicator() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50 && isVisible) {
-        setIsVisible(false); // trigger final animation
+      if (window.scrollY > 1 && isVisible) {
+        setIsVisible(false);
         setIsFinalAnimation(true);
       }
     };
