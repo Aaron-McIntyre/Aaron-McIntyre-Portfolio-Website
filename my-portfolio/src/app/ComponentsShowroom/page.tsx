@@ -7,6 +7,7 @@ import FeaturedProjectCard from "../components/FeaturedProjectCard";
 import FeaturedCardCarousel from "../components/FeaturedCardCarousel";
 import ViewMoreButton from "../components/ViewMoreButton";
 import SkillBox from "../components/SkillBox";
+import ScrollIndicator from "../components/ScrollIndicator";
 
 export default function ComponentsShowroom() {
   return (
@@ -36,14 +37,16 @@ export default function ComponentsShowroom() {
       /> */}
 
       {/* <FeaturedCardCarousel /> */}
-
+      {/* 
       <SkillBox title="Python" imageUrl="icons/python.svg" />
       <SkillBox title="JavaScript" imageUrl="icons/javascript.svg" />
       <SkillBox title="CSS" imageUrl="icons/css.svg" />
       <SkillBox title="Django" imageUrl="icons/django.svg" />
       <SkillBox title="HTML" imageUrl="icons/html5.svg" />
       <SkillBox title="Java" imageUrl="icons/java.svg" />
-      <SkillBox title="TailwindCSS" imageUrl="icons/tailwindcss.svg" />
+      <SkillBox title="TailwindCSS" imageUrl="icons/tailwindcss.svg" /> */}
+
+      <ScrollIndicator />
     </>
   );
 }

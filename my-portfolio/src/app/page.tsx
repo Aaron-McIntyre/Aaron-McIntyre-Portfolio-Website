@@ -1,5 +1,6 @@
 import indexPageStyles from "./index.module.css";
 import FeaturedCardCarousel from "./components/FeaturedCardCarousel";
+import ScrollIndicator from "./components/ScrollIndicator";
 
 export default function Home() {
   return (
@@ -12,6 +13,8 @@ export default function Home() {
           CS Student | Aspiring Software Engineer
         </h3>
       </div>
+
+      <ScrollIndicator />
 
       <div className="w-full h-screen">
         <h1 className="titleFont text-5xl text-white font-bold text-center pt-40">
