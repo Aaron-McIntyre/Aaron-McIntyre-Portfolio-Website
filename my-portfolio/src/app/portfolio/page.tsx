@@ -64,6 +64,46 @@ const projects = [
     projectLink: "https://myblog.com",
     tags: ["Next.js", "Prisma", "PostgreSQL"],
   },
+  {
+    id: 13,
+    title: "Blog Platform",
+    description: "A blog platform with authentication and CMS features.",
+    imageUrl: "/images/portfolioWebsiteScreenshot.png",
+    projectLink: "https://myblog.com",
+    tags: ["Next.js", "Prisma", "PostgreSQL"],
+  },
+  {
+    id: 12,
+    title: "E-Commerce Store",
+    description: "Full-stack store with payments integration.",
+    imageUrl: "/images/portfolioWebsiteScreenshot.png",
+    projectLink: "https://mystore.com",
+    tags: ["React", "Node.js", "Stripe"],
+  },
+  {
+    id: 11,
+    title: "Blog Platform",
+    description: "A blog platform with authentication and CMS features.",
+    imageUrl: "/images/portfolioWebsiteScreenshot.png",
+    projectLink: "https://myblog.com",
+    tags: ["Next.js", "Prisma", "PostgreSQL"],
+  },
+  {
+    id: 10,
+    title: "E-Commerce Store",
+    description: "Full-stack store with payments integration.",
+    imageUrl: "/images/portfolioWebsiteScreenshot.png",
+    projectLink: "https://mystore.com",
+    tags: ["React", "Node.js", "Stripe"],
+  },
+  {
+    id: 17,
+    title: "Blog Platform",
+    description: "A blog platform with authentication and CMS features.",
+    imageUrl: "/images/portfolioWebsiteScreenshot.png",
+    projectLink: "https://myblog.com",
+    tags: ["Next.js", "Prisma", "PostgreSQL"],
+  },
 ];
 
 export default function PortfolioSection() {
