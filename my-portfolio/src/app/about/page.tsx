@@ -16,13 +16,13 @@ export default function About() {
             Aaron McIntyre
           </h1>
           <h3 className=" text-xl text-[var(--text-muted)] font-medium p-10">
-            Hi, I'm Aaron, a fourth-year Computing Science student at the
+            Hi, I&apos;m Aaron, a fourth-year Computing Science student at the
             University of Glasgow, with a passion for software development and
-            problem-solving! Over the past few years, I've explored a wide range
-            of technologies and frameworks, gaining hands-on experience in both
-            front-end and back-end development. I've also learned about the full
-            software engineering process—including agile methodologies, version
-            control, and collaborative development!
+            problem-solving! Over the past few years, I&apos;ve explored a wide
+            range of technologies and frameworks, gaining hands-on experience in
+            both front-end and back-end development. I&apos;ve also learned
+            about the full software engineering process—including agile
+            methodologies, version control, and collaborative development!
           </h3>
 
           <a
