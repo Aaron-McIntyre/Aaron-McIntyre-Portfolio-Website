@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 type TagListProps = {
   tags: string[];
   maxVisible?: number;

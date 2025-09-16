@@ -3,7 +3,6 @@
 import { useEffect } from "react";
 import { createPortal } from "react-dom";
 import { AnimatePresence, motion } from "framer-motion";
-import StarBackground from "./StarBackground";
 
 type OverlayProps = {
   title: string;
@@ -34,7 +33,7 @@ export default function ProjectOverlay({
   return createPortal(
     <AnimatePresence>
       <motion.div
-        className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"
+        className="fixed inset-0 bg-[var-(--background)] flex items-center justify-center z-50 backdrop-blur-sm"
         onClick={(e) => {
           if (e.target === e.currentTarget) onClose();
         }}
@@ -42,8 +41,6 @@ export default function ProjectOverlay({
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
       >
-        <StarBackground />
-
         <motion.div
           className="bg-neutral-900 rounded-2xl p-8 max-w-3xl w-full max-h-[90vh] shadow-xl relative flex flex-col"
           initial={{ scale: 0.8, opacity: 0 }}

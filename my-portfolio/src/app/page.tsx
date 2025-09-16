@@ -1,4 +1,3 @@
-import indexPageStyles from "./index.module.css";
 import FeaturedCardCarousel from "./components/FeaturedCardCarousel";
 import ScrollIndicator from "./components/ScrollIndicator";
 

@@ -1,11 +1,9 @@
 export default function SkillBox({
   title,
   imageUrl,
-  type,
 }: {
   title: string;
   imageUrl: string;
-  type: string;
 }) {
   return (
     <div className="h-[15vh] w-[20vw] bg-neutral-900 mx-auto flex rounded-4xl shadow-lg">

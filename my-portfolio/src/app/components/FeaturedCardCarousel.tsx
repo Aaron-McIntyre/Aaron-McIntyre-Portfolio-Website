@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useMotionValue, useTransform } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
 import FeaturedProjectCard from "./FeaturedProjectCard";
 
@@ -76,8 +76,10 @@ const projects = [
 
 export default function FeaturedCardCarousel() {
   const [width, setWidth] = useState<number>(0);
+  const [carouselWidth, setCarouselWidth] = useState<number>(0);
   const carouselRef = useRef<HTMLDivElement>(null);
   const dragging = useRef(false);
+  const x = useMotionValue(0);
 
   useEffect(() => {
     const handleResize = () => {
@@ -86,6 +88,7 @@ export default function FeaturedCardCarousel() {
         const offsetWidth = carouselRef.current.offsetWidth;
         const padding = 32;
         setWidth(scrollWidth - offsetWidth + padding);
+        setCarouselWidth(offsetWidth);
       }
     };
     handleResize();
@@ -93,14 +96,18 @@ export default function FeaturedCardCarousel() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  const cardWidth = carouselWidth * 0.4;
+
   return (
     <motion.div
       ref={carouselRef}
       className="w-full overflow-hidden cursor-grab px-8"
+      style={{ perspective: 1000 }}
       whileTap={{ cursor: "grabbing" }}
     >
       <motion.div
         drag="x"
+        style={{ x }}
         dragConstraints={{ right: 0, left: -width }}
         className="flex gap-x-4"
         onDragStart={() => (dragging.current = false)}
@@ -108,16 +115,35 @@ export default function FeaturedCardCarousel() {
           if (Math.abs(info.offset.x) > 5) dragging.current = true;
         }}
       >
-        {projects.map((project) => (
-          <motion.div key={project.id} className="w-2/5 flex-shrink-0">
-            <FeaturedProjectCard
-              {...project}
-              onClick={() => {
-                if (!dragging.current) return;
-              }}
-            />
-          </motion.div>
-        ))}
+        {projects.map((project, index) => {
+          const cardOffset = useTransform(x, (value) => {
+            const center = carouselWidth / 2 - cardWidth / 2;
+            const cardCenter = index * (cardWidth + 16); // 16px gap
+            return cardCenter + value - center;
+          });
+
+          const rotateY = useTransform(
+            cardOffset,
+            [-300, 0, 300],
+            [15, 0, -15]
+          );
+          const scale = useTransform(
+            cardOffset,
+            [-300, 0, 300],
+            [0.85, 1, 0.85]
+          );
+          const zIndex = useTransform(cardOffset, [-300, 0, 300], [0, 1, 0]);
+
+          return (
+            <motion.div
+              key={project.id}
+              className="w-2/5 flex-shrink-0"
+              style={{ rotateY, scale, zIndex }}
+            >
+              <FeaturedProjectCard {...project} />
+            </motion.div>
+          );
+        })}
       </motion.div>
     </motion.div>
   );

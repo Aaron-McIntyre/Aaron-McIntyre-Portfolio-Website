@@ -17,12 +17,12 @@ export default function About() {
           </h1>
           <h3 className=" text-xl text-[var(--text-muted)] font-medium p-10">
             Hi, I'm Aaron, a fourth-year Computing Science student at the
-            University of Glasgow with a passion for software development and
-            problem-solving! <br /> Over the past few years, I've explored a
-            wide range of technologies and frameworks, gaining hands-on
-            experience in both front-end and back-end development. I've also
-            learned about the full software engineering process—including agile
-            methodologies, version control, and collaborative development!
+            University of Glasgow, with a passion for software development and
+            problem-solving! Over the past few years, I've explored a wide range
+            of technologies and frameworks, gaining hands-on experience in both
+            front-end and back-end development. I've also learned about the full
+            software engineering process—including agile methodologies, version
+            control, and collaborative development!
           </h3>
 
           <a
