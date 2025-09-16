@@ -50,7 +50,6 @@ export default function SkillFilter() {
             key={skill.title}
             title={skill.title}
             imageUrl={skill.imageUrl}
-            type={skill.type}
           />
         ))}
       </div>
