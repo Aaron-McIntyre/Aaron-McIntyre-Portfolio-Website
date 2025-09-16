@@ -99,7 +99,8 @@ const projects = [
   {
     id: 17,
     title: "Blog Platform",
-    description: "A blog platform with authentication and CMS features.",
+    description:
+      "A blog platform with authentication and CMS features. A blog platform with authentication and CMS features. A blog platform with authentication and CMS features. A blog platform with authentication and CMS features.",
     imageUrl: "/images/portfolioWebsiteScreenshot.png",
     projectLink: "https://myblog.com",
     tags: ["Next.js", "Prisma", "PostgreSQL"],

@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 interface ViewMoreButtonProps {
   onClick: () => void;
   isVisible?: boolean;
-  text?: string;       
+  text?: string;
 }
 
 const ViewMoreButton: React.FC<ViewMoreButtonProps> = ({
@@ -26,7 +26,7 @@ const ViewMoreButton: React.FC<ViewMoreButtonProps> = ({
         >
           <button
             onClick={onClick}
-            className="bg-neutral-900 border-neutral-800 shadow-lg hover:bg-neutral-800 text-[var(--text)] hover:text-[var(--text-muted)] px-6 py-3 rounded-lg "
+            className="bg-neutral-900 border-neutral-800 shadow-lg hover:bg-neutral-800 text-[var(--text)] hover:text-[var(--text-muted)] px-6 py-3 rounded-lg"
           >
             {text}
           </button>

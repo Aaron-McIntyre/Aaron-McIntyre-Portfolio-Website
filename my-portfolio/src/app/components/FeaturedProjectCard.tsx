@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import TagList from "./TagList";
 
 export default function FeaturedProjectCard({
   title,
@@ -26,14 +26,7 @@ export default function FeaturedProjectCard({
         <p className="text-[var(--text-muted)] text-xl">{description}</p>
       </div>
       <div className="px-2 pb-2 pt-2">
-        {tags.map((tag, index) => (
-          <span
-            key={index}
-            className="inline-block bg-[var(--background)] rounded-full px-3 py-1 text-sm font-semibold text-gray-700 dark:text-gray-300 mr-2 mb-2"
-          >
-            {tag}
-          </span>
-        ))}
+        <TagList tags={tags} maxVisible={4} />
       </div>
     </div>
   );

@@ -11,7 +11,17 @@ const projects = [
     description: "A modern portfolio built with Next.js and TailwindCSS.",
     imageUrl: "/images/portfolioWebsiteScreenshot.png",
     projectLink: "https://myportfolio.com",
-    tags: ["Next.js", "TailwindCSS", "Framer Motion"],
+    tags: [
+      "Next.js",
+      "TailwindCSS",
+      "Framer Motion",
+      "Test1",
+      "Test2",
+      "Test3",
+      "Test4",
+      "Test5",
+      "Test6",
+    ],
   },
   {
     id: 2,
@@ -61,7 +71,6 @@ const projects = [
     projectLink: "https://myblog.com",
     tags: ["Next.js", "Prisma", "PostgreSQL"],
   },
-  
 ];
 
 export default function FeaturedCardCarousel() {
@@ -69,41 +78,36 @@ export default function FeaturedCardCarousel() {
   const carouselRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-  const handleResize = () => {
-    if (carouselRef.current) {
-      const scrollWidth = carouselRef.current.scrollWidth;
-      const offsetWidth = carouselRef.current.offsetWidth;
-      const padding = 32;
-      setWidth(scrollWidth - offsetWidth + padding);
-    }
-  };
+    const handleResize = () => {
+      if (carouselRef.current) {
+        const scrollWidth = carouselRef.current.scrollWidth;
+        const offsetWidth = carouselRef.current.offsetWidth;
+        const padding = 32;
+        setWidth(scrollWidth - offsetWidth + padding);
+      }
+    };
 
-  handleResize(); // initial calculation
-  window.addEventListener("resize", handleResize);
-  return () => window.removeEventListener("resize", handleResize);
+    handleResize(); // initial calculation
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
   return (
-   
+    <motion.div
+      ref={carouselRef}
+      className="w-full overflow-hidden cursor-grab px-8"
+      whileTap={{ cursor: "grabbing" }}
+    >
       <motion.div
-        ref={carouselRef}
-        className="w-full overflow-hidden cursor-grab px-8"
-        whileTap={{ cursor: "grabbing" }}
+        drag="x"
+        dragConstraints={{ right: 0, left: -width }}
+        className="flex gap-x-4"
       >
-        <motion.div
-          drag="x"
-          dragConstraints={{ right: 0, left: -width }}
-          className="flex gap-x-4"
-        >
-          {projects.map((project) => (
-            <motion.div
-              key={project.id}
-              className="w-2/5 flex-shrink-0"
-            >
-              <FeaturedProjectCard {...project} />
-            </motion.div>
-          ))}
-        </motion.div>
+        {projects.map((project) => (
+          <motion.div key={project.id} className="w-2/5 flex-shrink-0">
+            <FeaturedProjectCard {...project} />
+          </motion.div>
+        ))}
       </motion.div>
-  
+    </motion.div>
   );
 }
