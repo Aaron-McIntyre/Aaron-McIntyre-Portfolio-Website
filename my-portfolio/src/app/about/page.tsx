@@ -11,12 +11,18 @@ export default function About() {
             className="rounded-full object-cover w-3/4 h-3/4"
           />
         </div>
-        <div className="flex-1 justify-center items-center text-center overflow-hidden">
-          <h1 className="titleFont text-5xl text-[var-(--text)] font-bold justify-center pt-20">
+        <div className="flex-1 justify-center items-center overflow-hidden">
+          <h1 className="titleFont text-5xl text-[var-(--text)] font-bold justify-center text-center pt-20">
             Aaron McIntyre
           </h1>
-          <h3 className=" text-xl text-[var(--text-muted)] font-medium justify-center p-10">
-            Sample text about me.
+          <h3 className=" text-xl text-[var(--text-muted)] font-medium p-10">
+            Hi, I'm Aaron, a fourth-year Computing Science student at the
+            University of Glasgow with a passion for software development and
+            problem-solving! <br /> Over the past few years, I've explored a
+            wide range of technologies and frameworks, gaining hands-on
+            experience in both front-end and back-end development. I've also
+            learned about the full software engineering process—including agile
+            methodologies, version control, and collaborative development!
           </h3>
         </div>
       </div>

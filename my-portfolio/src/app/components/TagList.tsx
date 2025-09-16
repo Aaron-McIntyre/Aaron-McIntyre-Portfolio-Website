@@ -17,7 +17,7 @@ export default function TagList({ tags, maxVisible = 5 }: TagListProps) {
       {visibleTags.map((tag, index) => (
         <span
           key={index}
-          className="inline-block bg-[var(--background)] rounded-full px-3 py-1 text-sm font-semibold text-[var(--text)] mr-2 mb-2"
+          className="inline-block bg-[var(--background)] rounded-full px-3 py-1 text-sm font-semibold text-[var(--text)] mr-2 mb-2 cursor-default"
         >
           {tag}
         </span>
@@ -26,7 +26,7 @@ export default function TagList({ tags, maxVisible = 5 }: TagListProps) {
       {hiddenTags.length > 0 && (
         <button
           onClick={() => setIsOverlayOpen(true)}
-          className="inline-flex bg-neutral-800 rounded-full px-3 py-1 text-sm font-semibold text-[var(--text)] mr-2 mb-2"
+          className="inline-flex bg-neutral-800 rounded-full px-3 py-1 text-sm font-semibold text-[var(--text)] mr-2 mb-2 cursor-default"
         >
           +{hiddenTags.length} more
         </button>

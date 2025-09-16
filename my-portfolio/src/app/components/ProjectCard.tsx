@@ -18,7 +18,7 @@ export default function ProjectCard({
 }) {
   return (
     <motion.div
-      className="w-full h-full rounded-2xl overflow-hidden shadow-lg bg-neutral-900 border border-neutral-900 flex flex-col"
+      className="cursor-default w-full h-full rounded-2xl overflow-hidden shadow-lg bg-neutral-900 border border-neutral-900 flex flex-col"
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
     >

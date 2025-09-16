@@ -1,12 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import ViewMoreButton from "../components/ViewMoreButton";
-import portfolioPageStyles from "./portfolio.module.css";
 import ProjectCard from "../components/ProjectCard";
 
-// Sample project data
 const projects = [
   {
     id: 1,
@@ -108,11 +106,24 @@ const projects = [
 ];
 
 export default function PortfolioSection() {
+  const [searchQuery, setSearchQuery] = useState("");
   const [visibleCount, setVisibleCount] = useState(4);
 
-  const handleViewMore = () => setVisibleCount((prev) => prev + 4);
+  const filteredProjects = projects.filter((project) => {
+    const query = searchQuery.toLowerCase();
+    return (
+      project.title.toLowerCase().includes(query) ||
+      project.description.toLowerCase().includes(query) ||
+      project.tags.some((tag) => tag.toLowerCase().includes(query))
+    );
+  });
 
-  const visibleProjects = projects.slice(0, visibleCount);
+  useEffect(() => {
+    setVisibleCount(4);
+  }, [searchQuery]);
+
+  const handleViewMore = () => setVisibleCount((prev) => prev + 4);
+  const visibleProjects = filteredProjects.slice(0, visibleCount);
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -133,32 +144,44 @@ export default function PortfolioSection() {
         All of my personal projects!
       </h3>
 
-      <motion.div
-        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-      >
-        <AnimatePresence>
-          {visibleProjects.map((project) => (
-            <motion.div
-              key={project.id}
-              variants={itemVariants}
-              initial="hidden"
-              animate="visible"
-              exit={{ opacity: 0, y: -10 }}
-            >
-              <ProjectCard
-                title={project.title}
-                description={project.description}
-                imageUrl={project.imageUrl}
-                projectLink={project.projectLink}
-                tags={project.tags}
-              />
-            </motion.div>
-          ))}
-        </AnimatePresence>
-      </motion.div>
+      <div className="relative">
+        <div className="relative pt-5 top-0 right-0">
+          <input
+            type="text"
+            placeholder="Search projects..."
+            className="absolute top-0 right-0 w-64 p-2 rounded-lg bg-neutral-800 text-[var(--text)] placeholder-[var(--text-muted)] focus:outline-none focus:ring-2 focus:ring-neutral-700 text-sm"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+          />
+        </div>
+
+        <motion.div
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-12"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <AnimatePresence>
+            {visibleProjects.map((project) => (
+              <motion.div
+                key={project.id}
+                variants={itemVariants}
+                initial="hidden"
+                animate="visible"
+                exit={{ opacity: 0, y: -10 }}
+              >
+                <ProjectCard
+                  title={project.title}
+                  description={project.description}
+                  imageUrl={project.imageUrl}
+                  projectLink={project.projectLink}
+                  tags={project.tags}
+                />
+              </motion.div>
+            ))}
+          </AnimatePresence>
+        </motion.div>
+      </div>
 
       <ViewMoreButton
         onClick={handleViewMore}
