@@ -30,7 +30,6 @@ export default function About() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            {" "}
             <button className="bg-neutral-900 ml-10 border-neutral-800 shadow-lg hover:bg-neutral-800 text-[var(--text)] hover:text-[var(--text-muted)] px-6 py-3 rounded-lg">
               View my CV
             </button>

@@ -1,8 +1,8 @@
 "use client";
 
-import { motion, useMotionValue, useTransform } from "framer-motion";
+import { motion, useMotionValue } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
-import FeaturedProjectCard from "./FeaturedProjectCard";
+import CarouselCard from "./CarouselCard";
 
 const projects = [
   {
@@ -115,35 +115,16 @@ export default function FeaturedCardCarousel() {
           if (Math.abs(info.offset.x) > 5) dragging.current = true;
         }}
       >
-        {projects.map((project, index) => {
-          const cardOffset = useTransform(x, (value) => {
-            const center = carouselWidth / 2 - cardWidth / 2;
-            const cardCenter = index * (cardWidth + 16); // 16px gap
-            return cardCenter + value - center;
-          });
-
-          const rotateY = useTransform(
-            cardOffset,
-            [-300, 0, 300],
-            [15, 0, -15]
-          );
-          const scale = useTransform(
-            cardOffset,
-            [-300, 0, 300],
-            [0.85, 1, 0.85]
-          );
-          const zIndex = useTransform(cardOffset, [-300, 0, 300], [0, 1, 0]);
-
-          return (
-            <motion.div
-              key={project.id}
-              className="w-2/5 flex-shrink-0"
-              style={{ rotateY, scale, zIndex }}
-            >
-              <FeaturedProjectCard {...project} />
-            </motion.div>
-          );
-        })}
+        {projects.map((project, index) => (
+          <CarouselCard
+            key={project.id}
+            project={project}
+            index={index}
+            x={x}
+            carouselWidth={carouselWidth}
+            cardWidth={cardWidth}
+          />
+        ))}
       </motion.div>
     </motion.div>
   );
