@@ -9,10 +9,22 @@ const projects = [
   {
     id: 1,
     title: "Portfolio Website",
-    description: "A modern portfolio built with Next.js and TailwindCSS.",
+    description:
+      "A modern portfolio built with Next.js and TailwindCSS. A modern portfolio built with Next.js and TailwindCSS. A modern portfolio built with Next.js and TailwindCSS. A modern portfolio built with Next.js and A modern portfolio built with Next.js and TailwindCSS. A modern portfolio built with Next.js and TailwindCSS. A modern portfolio built with Next.js and TailwindCSS. A modern portfolio built with Next.js and Tai A modern portfolio built with Next.js and TailwindCSS. A modern portfolio built with Next.js and TailwindCSS. A modern portfolio built with Next.js and TailwindCSS. A modern portfolio built with Next.js and Tai A modern portfolio built with Next.js and TailwindCSS. A modern portfolio built with Next.js and TailwindCSS. A modern portfolio built with Next.js and TailwindCSS. A modern portfolio built with Next.js and TaiA modern portfolio built with Next.js and TailwindCSS. A modern portfolio built with Next.js and TailwindCSS. A modern portfolio built with Next.js and TailwindCSS. A modern portfolio built with Next.js and Tai TailwindCSS. A modern portfolio built with Next.js and TailwindCSS. A modern portfolio built with Next.js and TailwindCSS. A modern portfolio built with Next.js and TailwindCSS. A modern portfolio built with Next.js and TailwindCSS. A modern portfolio built with Next.js and TailwindCSS. A modern portfolio built with Next.js and TailwindCSS. A modern portfolio built with Next.js and TailwindCSS. A modern portfolio built with Next.js and TailwindCSS.A modern portfolio built with Next.js and TailwindCSS. ",
     imageUrl: "/images/portfolioWebsiteScreenshot.png",
-    projectLink: "https://myportfolio.com",
-    tags: ["Next.js", "TailwindCSS", "Framer Motion"],
+    githubProjectLink: "https://www.linkedin.com/in/aaron-lee-mcintyre",
+    projectLink: "https://www.linkedin.com/in/aaron-lee-mcintyre",
+    tags: [
+      "Next.js",
+      "TailwindCSS",
+      "Framer Motion",
+      "Framer Motion",
+      "Framer Motion",
+      "Framer Motion",
+      "Framer Motion",
+      "Framer Motion",
+      "Framer Motion",
+    ],
   },
   {
     id: 2,
@@ -175,6 +187,7 @@ export default function PortfolioSection() {
                   description={project.description}
                   imageUrl={project.imageUrl}
                   projectLink={project.projectLink}
+                  githubProjectLink={project.githubProjectLink}
                   tags={project.tags}
                 />
               </motion.div>

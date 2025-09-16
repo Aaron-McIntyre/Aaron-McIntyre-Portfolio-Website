@@ -11,6 +11,7 @@ const projects = [
     description: "A modern portfolio built with Next.js and TailwindCSS.",
     imageUrl: "/images/portfolioWebsiteScreenshot.png",
     projectLink: "https://myportfolio.com",
+    githubProjectLink: "https://myportfolio.com",
     tags: [
       "Next.js",
       "TailwindCSS",
@@ -76,6 +77,7 @@ const projects = [
 export default function FeaturedCardCarousel() {
   const [width, setWidth] = useState<number>(0);
   const carouselRef = useRef<HTMLDivElement>(null);
+  const dragging = useRef(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -86,11 +88,11 @@ export default function FeaturedCardCarousel() {
         setWidth(scrollWidth - offsetWidth + padding);
       }
     };
-
-    handleResize(); // initial calculation
+    handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
   return (
     <motion.div
       ref={carouselRef}
@@ -101,10 +103,19 @@ export default function FeaturedCardCarousel() {
         drag="x"
         dragConstraints={{ right: 0, left: -width }}
         className="flex gap-x-4"
+        onDragStart={() => (dragging.current = false)}
+        onDrag={(e, info) => {
+          if (Math.abs(info.offset.x) > 5) dragging.current = true;
+        }}
       >
         {projects.map((project) => (
           <motion.div key={project.id} className="w-2/5 flex-shrink-0">
-            <FeaturedProjectCard {...project} />
+            <FeaturedProjectCard
+              {...project}
+              onClick={() => {
+                if (!dragging.current) return;
+              }}
+            />
           </motion.div>
         ))}
       </motion.div>

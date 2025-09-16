@@ -10,12 +10,14 @@ export default function ProjectCard({
   description,
   imageUrl,
   projectLink,
+  githubProjectLink,
   tags,
 }: {
   title: string;
   description: string;
   imageUrl: string;
   projectLink: string;
+  githubProjectLink?: string;
   tags: string[];
 }) {
   const [isOverlayOpen, setIsOverlayOpen] = useState(false);
@@ -48,6 +50,7 @@ export default function ProjectCard({
           description={description}
           imageUrl={imageUrl}
           projectLink={projectLink}
+          githubProjectLink={githubProjectLink}
           tags={tags}
           onClose={() => setIsOverlayOpen(false)}
         />

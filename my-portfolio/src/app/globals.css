@@ -32,3 +32,21 @@ body {
   color: var(--text);
   font-family: 'Roboto-Bold', sans-serif;
 }
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: #555; 
+  border-radius: 3px;
+  transition: background-color 0.3s;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background-color: #888;
+}
