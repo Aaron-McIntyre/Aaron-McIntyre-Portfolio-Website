@@ -3,12 +3,12 @@ import SkillFilter from "../components/SkillFilter";
 export default function About() {
   return (
     <>
-      <div className="h-[70vh] mt-10 bg-neutral-900 max-w-6xl mx-auto flex rounded-4xl">
+      <div className="h-[100vh] max-w-6xl mx-auto flex rounded-4xl">
         <div className="flex flex-1 justify-center items-center text-center">
           <img
             src="images/placeholder.png"
             alt="Profile Picture"
-            className="rounded-full object-cover w-3/4 h-3/4"
+            className="rounded-full object-cover w-3/5 h-3/5"
           />
         </div>
         <div className="flex-1 justify-center items-center overflow-hidden">
@@ -24,6 +24,17 @@ export default function About() {
             learned about the full software engineering process—including agile
             methodologies, version control, and collaborative development!
           </h3>
+
+          <a
+            href="/AaronMcIntyre_CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {" "}
+            <button className="bg-neutral-900 ml-10 border-neutral-800 shadow-lg hover:bg-neutral-800 text-[var(--text)] hover:text-[var(--text-muted)] px-6 py-3 rounded-lg">
+              View my CV
+            </button>
+          </a>
         </div>
       </div>
       <h1 className="titleFont text-6xl text-white font-bold text-center pt-20">
