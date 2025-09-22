@@ -161,7 +161,7 @@ export default function PortfolioSection() {
           <input
             type="text"
             placeholder="Search projects..."
-            className="absolute top-0 right-0 w-64 p-2 rounded-lg bg-neutral-800 text-[var(--text)] placeholder-[var(--text-muted)] focus:outline-none focus:ring-2 focus:ring-neutral-700 text-sm"
+            className="absolute top-0 right-0 w-64 p-2 rounded-lg bg-neutral-800 text-[var(--text)] placeholder-[var(--text-muted)] focus:outline-none focus:ring-2 focus:ring-neutral-700 text-sm sm:left-auto sm:right-0 sm:translate-x-0 left-1/2 -translate-x-1/2"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />

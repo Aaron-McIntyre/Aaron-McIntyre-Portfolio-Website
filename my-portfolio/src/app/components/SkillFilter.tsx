@@ -44,7 +44,13 @@ export default function SkillFilter() {
         ))}
       </div>
 
-      <div className="grid grid-cols-4 gap-4 pt-10 pb-30 justify-center">
+      <div
+        className="
+    grid gap-x-10 gap-y-5 sm:gap-x-5 sm:gap-y-2
+    grid-cols-2 md:grid-cols-3 lg:grid-cols-4
+    pt-10 pb-20 justify-center
+  "
+      >
         {filteredSkills.map((skill) => (
           <SkillBox
             key={skill.title}

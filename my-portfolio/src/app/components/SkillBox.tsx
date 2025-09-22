@@ -6,16 +6,24 @@ export default function SkillBox({
   imageUrl: string;
 }) {
   return (
-    <div className="h-[15vh] w-[20vw] bg-neutral-900 mx-auto flex rounded-4xl shadow-lg">
-      <div className=" flex flex-1 justify-center items-center text-center overflow-hidden">
+    <div
+      className="
+        flex items-center 
+        bg-neutral-900 rounded-4xl shadow-lg 
+        w-40 h-20 sm:w-48 sm:h-24 md:w-56 md:h-28 lg:w-64 lg:h-32 
+        mx-auto
+      "
+    >
+      <div className="flex flex-1 justify-center items-center overflow-hidden">
         <img
           src={imageUrl}
           alt={`${title} Logo`}
-          className="rounded-full w-[70%] h-[70%]"
+          className="w-2/3 h-2/3 object-contain"
         />
       </div>
-      <div className="flex flex-1 justify-center items-center text-center overflow-hidden">
-        <h2 className=" text-xl text-[var(--text)] font-medium justify-center p-10 mr-10">
+
+      <div className="flex flex-1 justify-center items-center overflow-hidden">
+        <h2 className="text-sm sm:text-base md:text-lg lg:text-xl text-[var(--text)] font-medium text-center">
           {title}
         </h2>
       </div>
