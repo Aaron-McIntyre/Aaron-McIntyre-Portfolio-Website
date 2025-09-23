@@ -13,7 +13,9 @@ export default function Home() {
         </h3>
       </div>
 
-      <ScrollIndicator />
+      <div className="hidden xl:block">
+        <ScrollIndicator />
+      </div>
 
       <div className="w-full h-screen hidden lg:block">
         <h1 className="titleFont lg:text-5xl md:text-3xl sm:text-2xl text-white font-bold text-center pt-40">
