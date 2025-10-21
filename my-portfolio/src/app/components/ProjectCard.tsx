@@ -16,7 +16,7 @@ export default function ProjectCard({
   title: string;
   description: string;
   imageUrl: string;
-  projectLink: string;
+  projectLink?: string;
   githubProjectLink?: string;
   tags: string[];
 }) {

@@ -6,7 +6,7 @@ export default function About() {
       <div className="min-h-screen max-w-6xl mx-auto flex flex-col lg:flex-row items-center lg:items-center gap-8 px-4 lg:px-0 py-10">
         <div className="w-full lg:w-1/2 flex justify-center lg:justify-center">
           <img
-            src="images/placeholder.png"
+            src="images/ProfilePicture.jpg"
             alt="Profile Picture"
             className="rounded-full object-cover w-40 h-40 sm:w-60 sm:h-60 lg:w-72 lg:h-72"
           />
